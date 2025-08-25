@@ -7,9 +7,9 @@
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #f093fb, #f5576c, #4facfe, #43e97b);
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
       background-size: 400% 400%;
-      animation: gradientBG 10s ease infinite;
+      animation: gradientBG 12s ease infinite;
       margin: 0;
       padding: 0;
       color: white;
@@ -24,146 +24,89 @@
     header {
       text-align: center;
       padding: 20px;
-      background: rgba(0,0,0,0.5);
+      background: rgba(0,0,0,0.6);
       backdrop-filter: blur(8px);
       border-bottom: 2px solid white;
     }
 
     header h1 {
-      font-size: 2.5em;
+      font-size: 2.8em;
       margin: 0;
       text-shadow: 2px 2px 8px black;
     }
 
-    .upload-box {
-      text-align: center;
-      padding: 20px;
-      background: rgba(0,0,0,0.3);
-      margin: 20px;
-      border-radius: 10px;
+    header p {
+      margin: 5px 0 0;
+      font-style: italic;
     }
 
-    .upload-box input {
-      margin-top: 10px;
-      padding: 8px;
-      background: white;
-      color: #333;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .gallery {
+    .team-section {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
-      padding: 20px;
+      padding: 30px;
     }
 
-    .card {
-      background: rgba(255,255,255,0.15);
+    .member {
+      background: rgba(255,255,255,0.1);
       border-radius: 15px;
-      overflow: hidden;
+      padding: 20px;
+      text-align: center;
       box-shadow: 0 8px 15px rgba(0,0,0,0.3);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      position: relative;
     }
 
-    .card:hover {
+    .member:hover {
       transform: scale(1.05);
-      box-shadow: 0 12px 25px rgba(0,0,0,0.5);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.6);
     }
 
-    .card img, .card video {
-      width: 100%;
-      border-bottom: 3px solid white;
+    .member h2 {
+      margin: 10px 0 5px;
+      font-size: 1.4em;
+      color: #ffdd57;
+      text-shadow: 1px 1px 5px black;
     }
 
-    .card p {
-      text-align: center;
-      padding: 8px;
-      background: rgba(0,0,0,0.5);
+    .member p {
       margin: 0;
+      font-size: 1.1em;
       font-weight: bold;
-    }
-
-    .delete-btn {
-      position: absolute;
-      top: 8px;
-      right: 8px;
-      background: red;
-      color: white;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      width: 30px;
-      height: 30px;
-      font-size: 18px;
-      line-height: 30px;
-      text-align: center;
-      box-shadow: 0 0 5px black;
-      transition: 0.3s;
-    }
-
-    .delete-btn:hover {
-      background: darkred;
+      color: #d4f1f9;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>⚡ 404 Fixers ⚡</h1>
-    <p>Upload, View, and Delete Your Photos, Videos, and Files</p>
+    <h1>👾 404 Fixers 👾</h1>
+    <p>WE ARE KNOWN FOR HANDLING ERRORS</p>
   </header>
 
-  <div class="upload-box">
-    <h2>Upload Files</h2>
-    <input type="file" id="fileInput" multiple>
-  </div>
-
-  <section class="gallery" id="gallery"></section>
-
-  <script>
-    const fileInput = document.getElementById('fileInput');
-    const gallery = document.getElementById('gallery');
-
-    fileInput.addEventListener('change', (event) => {
-      const files = event.target.files;
-
-      for (let file of files) {
-        const card = document.createElement('div');
-        card.className = 'card';
-
-        // Delete button
-        const delBtn = document.createElement('button');
-        delBtn.innerText = "❌";
-        delBtn.className = "delete-btn";
-        delBtn.onclick = () => card.remove();
-        card.appendChild(delBtn);
-
-        // File preview
-        if (file.type.startsWith("image/")) {
-          const img = document.createElement('img');
-          img.src = URL.createObjectURL(file);
-          card.appendChild(img);
-        } else if (file.type.startsWith("video/")) {
-          const video = document.createElement('video');
-          video.src = URL.createObjectURL(file);
-          video.controls = true;
-          card.appendChild(video);
-        } else {
-          const icon = document.createElement('p');
-          icon.innerText = "📄 " + file.name;
-          card.appendChild(icon);
-        }
-
-        // File name
-        const nameTag = document.createElement('p');
-        nameTag.innerText = file.name;
-        card.appendChild(nameTag);
-
-        gallery.appendChild(card);
-      }
-    });
-  </script>
+  <section class="team-section">
+    <div class="member">
+      <h2>Abi Deepthi</h2>
+      <p>Team Leader</p>
+    </div>
+    <div class="member">
+      <h2>Rackshana</h2>
+      <p>Team Executor</p>
+    </div>
+    <div class="member">
+      <h2>SK</h2>
+      <p>Web Master</p>
+    </div>
+    <div class="member">
+      <h2>Vishaal Hariharan</h2>
+      <p>Designer</p>
+    </div>
+    <div class="member">
+      <h2>Rasheeth Ahamath</h2>
+      <p>Financial Manager</p>
+    </div>
+    <div class="member">
+      <h2>Ahamed Affiq</h2>
+      <p>Recorder</p>
+    </div>
+  </section>
 </body>
 </html>
