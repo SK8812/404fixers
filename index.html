@@ -1,112 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>404 Fixers</title>
+  <meta name="description" content="404 Fixers — Our Team" />
   <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      background-size: 400% 400%;
-      animation: gradientBG 12s ease infinite;
-      margin: 0;
-      padding: 0;
-      color: white;
+    :root{
+      --bg1:#0f2027; --bg2:#203a43; --bg3:#2c5364;
+      --card:rgba(255,255,255,0.1); --text:#fff; --accent:#ffdd57;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; color:var(--text); font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;
+      background: linear-gradient(135deg,var(--bg1),var(--bg2),var(--bg3));
+      background-size:400% 400%; animation:bg 12s ease infinite;
+    }
+    @keyframes bg{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+    header{
+      text-align:center; padding:28px 16px; background:rgba(0,0,0,.55); border-bottom:2px solid rgba(255,255,255,.25);
+      backdrop-filter: blur(6px);
+    }
+    header h1{margin:0; font-size:2.4rem; text-shadow:0 2px 10px rgba(0,0,0,.6)}
+    header p{margin:.5rem 0 0; opacity:.9; letter-spacing:.5px}
+
+    /* Creative logo */
+    .logo {
+      width:100px; height:100px; margin:0 auto 12px;
+      display:flex; align-items:center; justify-content:center;
+      background: radial-gradient(circle at 30% 30%, var(--accent), #ff6f61, #9c27b0);
+      border-radius:50%; 
+      box-shadow:0 6px 18px rgba(0,0,0,.5);
+      font-size:1.8rem; font-weight:900; color:#fff;
+      text-shadow:0 2px 6px rgba(0,0,0,.7);
+      border:3px solid rgba(255,255,255,.6);
     }
 
-    @keyframes gradientBG {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+    .team{
+      max-width:1100px; margin:32px auto; padding:0 16px;
+      display:grid; gap:18px; grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
     }
-
-    header {
-      text-align: center;
-      padding: 20px;
-      background: rgba(0,0,0,0.6);
-      backdrop-filter: blur(8px);
-      border-bottom: 2px solid white;
+    .member{
+      background:var(--card); border:1px solid rgba(255,255,255,.25);
+      border-radius:16px; padding:20px; text-align:center;
+      box-shadow:0 10px 25px rgba(0,0,0,.35);
+      transition:transform .25s ease, box-shadow .25s ease;
     }
-
-    header h1 {
-      font-size: 2.8em;
-      margin: 0;
-      text-shadow: 2px 2px 8px black;
-    }
-
-    header p {
-      margin: 5px 0 0;
-      font-style: italic;
-    }
-
-    .team-section {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      padding: 30px;
-    }
-
-    .member {
-      background: rgba(255,255,255,0.1);
-      border-radius: 15px;
-      padding: 20px;
-      text-align: center;
-      box-shadow: 0 8px 15px rgba(0,0,0,0.3);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .member:hover {
-      transform: scale(1.05);
-      box-shadow: 0 12px 25px rgba(0,0,0,0.6);
-    }
-
-    .member h2 {
-      margin: 10px 0 5px;
-      font-size: 1.4em;
-      color: #ffdd57;
-      text-shadow: 1px 1px 5px black;
-    }
-
-    .member p {
-      margin: 0;
-      font-size: 1.1em;
-      font-weight: bold;
-      color: #d4f1f9;
-    }
+    .member:hover{ transform:translateY(-6px); box-shadow:0 16px 35px rgba(0,0,0,.5) }
+    .name{ font-size:1.15rem; margin:.2rem 0; color:var(--accent); font-weight:700 }
+    .role{ margin:0; opacity:.95; font-weight:600 }
+    footer{ text-align:center; padding:24px; opacity:.8 }
   </style>
 </head>
 <body>
   <header>
+    <div class="logo">404</div>
     <h1>👾 404 Fixers 👾</h1>
     <p>WE ARE KNOWN FOR HANDLING ERRORS</p>
   </header>
 
-  <section class="team-section">
-    <div class="member">
-      <h2>Abi Deepthi</h2>
-      <p>Team Leader</p>
-    </div>
-    <div class="member">
-      <h2>Rackshana</h2>
-      <p>Team Executor</p>
-    </div>
-    <div class="member">
-      <h2>SK</h2>
-      <p>Web Master</p>
-    </div>
-    <div class="member">
-      <h2>Vishaal Hariharan</h2>
-      <p>Designer</p>
-    </div>
-    <div class="member">
-      <h2>Rasheeth Ahamath</h2>
-      <p>Financial Manager</p>
-    </div>
-    <div class="member">
-      <h2>Ahamed Affiq</h2>
-      <p>Recorder</p>
-    </div>
-  </section>
+  <main class="team">
+    <section class="member">
+      <div class="name">Abi Deepthi</div>
+      <p class="role">Team Leader</p>
+    </section>
+    <section class="member">
+      <div class="name">Rackshana</div>
+      <p class="role">Team Executor</p>
+    </section>
+    <section class="member">
+      <div class="name">SK</div>
+      <p class="role">Web Master</p>
+    </section>
+    <section class="member">
+      <div class="name">Vishaal Hariharan</div>
+      <p class="role">Designer</p>
+    </section>
+    <section class="member">
+      <div class="name">Rasheeth Ahamath</div>
+      <p class="role">Financial Manager</p>
+    </section>
+    <section class="member">
+      <div class="name">Ahamed Affiq</div>
+      <p class="role">Recorder</p>
+    </section>
+  </main>
+
+  <footer>© 404 Fixers</footer>
 </body>
 </html>
