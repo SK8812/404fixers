@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Nose Project</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      color: white;
+      background: radial-gradient(circle at top, #000428, #004e92);
+      animation: bgPulse 8s infinite alternate;
+    }
+    @keyframes bgPulse {
+      from { background-color: #000428; }
+      to { background-color: #004e92; }
+    }
+    header {
+      text-align: center;
+      padding: 30px;
+      animation: glow 2s infinite alternate;
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #00e6ff, 0 0 20px #00e6ff; }
+      to { text-shadow: 0 0 30px #00e6ff, 0 0 60px #00e6ff; }
+    }
+    h1 {
+      color: #00e6ff;
+    }
+    section {
+      margin: 30px;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 15px;
+      box-shadow: 0 0 20px #00e6ff;
+      animation: fadeIn 1.5s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    img {
+      display: block;
+      max-width: 90%;
+      margin: 20px auto;
+      border-radius: 15px;
+      box-shadow: 0 0 25px #00e6ff;
+    }
+    ul {
+      list-style-type: square;
+      margin-left: 20px;
+    }
+    .btn {
+      display: block;
+      width: fit-content;
+      margin: 30px auto;
+      padding: 10px 25px;
+      color: white;
+      background: linear-gradient(45deg, #00e6ff, #0072ff);
+      border-radius: 25px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 25px #00e6ff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>💡 E-Nose Drug Detection System 💡</h1>
+  </header>
+
+  <section>
+    <h2>Introduction</h2>
+    <p>The E-Nose (Electronic Nose) is a cutting-edge system that mimics the human olfactory system to detect and identify various drug odors using gas sensors. It’s designed to analyze chemical patterns emitted from substances to determine their nature quickly and accurately.</p>
+  </section>
+
+  <section>
+    <h2>Project Overview</h2>
+    <p>The system employs multiple gas sensors (MQ series) connected to a microcontroller, analyzing air samples for volatile compounds. The processed data can identify specific drugs or hazardous materials in real-time, making it useful for security, customs, and forensic applications.</p>
+    <img src="WhatsApp Image 2025-11-06 at 22.45.32_e0e824cc.jpg" alt="E-Nose Project">
+  </section>
+
+  <section>
+    <h2>Key Components</h2>
+    <ul>
+      <li>MQ2, MQ3, MQ135, MQ138 Sensors – for detecting gases and drug vapors</li>
+      <li>DHT Sensor – for temperature and humidity sensing</li>
+      <li>LCD Display – to show gas concentration readings</li>
+      <li>Buzzer – alerts when drug substances are detected</li>
+      <li>LED Lights – indicate status levels visually</li>
+      <li>Breadboard – for circuit prototyping</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Stakeholders</h2>
+    <p>The E-Nose project involves key stakeholders such as law enforcement agencies, customs departments, and research laboratories, all of whom benefit from fast, accurate drug detection systems.</p>
+    <img src="WhatsApp Image 2025-10-11 at 10.40.38_17555b55.jpg" alt="Stakeholders">
+  </section>
+
+  <section>
+    <h2>Applications</h2>
+    <ul>
+      <li>Drug and narcotic detection at airports and checkpoints</li>
+      <li>Quality control in pharmaceuticals</li>
+      <li>Environmental monitoring</li>
+      <li>Food and beverage quality testing</li>
+      <li>Forensic investigations</li>
+    </ul>
+  </section>
+
+  <a href="index.html" class="btn">⬅ Back to Team Page</a>
+</body>
+</html>
