@@ -1,55 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>404 Fixers</title>
-  <meta name="description" content="404 Fixers — Our Team" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 Fixers - E-Nose Project</title>
   <style>
-    :root{
-      --bg1:#0f2027; --bg2:#203a43; --bg3:#2c5364;
-      --card:rgba(255,255,255,0.1); --text:#fff; --accent:#ffdd57;
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      color: white;
+      background: radial-gradient(circle at top, #000428, #004e92);
+      overflow-x: hidden;
+      animation: bgPulse 8s infinite alternate;
     }
-    *{box-sizing:border-box}
-    body{
-      margin:0; color:var(--text); font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;
-      background: linear-gradient(135deg,var(--bg1),var(--bg2),var(--bg3));
-      background-size:400% 400%; animation:bg 12s ease infinite;
+    @keyframes bgPulse {
+      from { background-color: #000428; }
+      to { background-color: #004e92; }
     }
-    @keyframes bg{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
-    header{
-      text-align:center; padding:28px 16px; background:rgba(0,0,0,.55); border-bottom:2px solid rgba(255,255,255,.25);
-      backdrop-filter: blur(6px);
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      animation: glow 2s infinite alternate;
     }
-    header h1{margin:0; font-size:2.4rem; text-shadow:0 2px 10px rgba(0,0,0,.6)}
-    header p{margin:.5rem 0 0; opacity:.9; letter-spacing:.5px}
-
-    /* Creative logo */
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #00e6ff, 0 0 20px #00e6ff; }
+      to { text-shadow: 0 0 30px #00e6ff, 0 0 60px #00e6ff; }
+    }
     .logo {
-      width:100px; height:100px; margin:0 auto 12px;
-      display:flex; align-items:center; justify-content:center;
-      background: radial-gradient(circle at 30% 30%, var(--accent), #ff6f61, #9c27b0);
-      border-radius:50%; 
-      box-shadow:0 6px 18px rgba(0,0,0,.5);
-      font-size:1.8rem; font-weight:900; color:#fff;
-      text-shadow:0 2px 6px rgba(0,0,0,.7);
-      border:3px solid rgba(255,255,255,.6);
+      font-size: 4em;
+      font-weight: bold;
+      color: #00e6ff;
     }
-
-    .team{
-      max-width:1100px; margin:32px auto; padding:0 16px;
-      display:grid; gap:18px; grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    .team {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
     }
-    .member{
-      background:var(--card); border:1px solid rgba(255,255,255,.25);
-      border-radius:16px; padding:20px; text-align:center;
-      box-shadow:0 10px 25px rgba(0,0,0,.35);
-      transition:transform .25s ease, box-shadow .25s ease;
+    .member {
+      background: rgba(0, 0, 0, 0.5);
+      border: 2px solid #00e6ff;
+      border-radius: 15px;
+      padding: 20px;
+      width: 220px;
+      text-align: center;
+      transition: 0.4s;
+      box-shadow: 0 0 15px #00e6ff;
     }
-    .member:hover{ transform:translateY(-6px); box-shadow:0 16px 35px rgba(0,0,0,.5) }
-    .name{ font-size:1.15rem; margin:.2rem 0; color:var(--accent); font-weight:700 }
-    .role{ margin:0; opacity:.95; font-weight:600 }
-    footer{ text-align:center; padding:24px; opacity:.8 }
+    .member:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 25px #00e6ff, 0 0 50px #00e6ff;
+    }
+    .name {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #00e6ff;
+    }
+    .role {
+      color: #fff;
+      font-style: italic;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      font-size: 0.9em;
+      color: #aaa;
+    }
+    .btn {
+      display: block;
+      margin: 40px auto;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      color: white;
+      background: linear-gradient(45deg, #00e6ff, #0072ff);
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 0 20px #00e6ff;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: linear-gradient(45deg, #0072ff, #00e6ff);
+      box-shadow: 0 0 30px #00e6ff;
+      transform: scale(1.05);
+    }
   </style>
 </head>
 <body>
@@ -86,8 +122,8 @@
     </section>
   </main>
 
+  <a href="project.html" class="btn">Go to Project Page 🚀</a>
+
   <footer>© 404 Fixers</footer>
 </body>
 </html>
-
-
